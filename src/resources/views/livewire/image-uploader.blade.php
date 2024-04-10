@@ -33,7 +33,7 @@
             @foreach ($images as $index => $image)
                 <div class="single-image mb-4">
                     <img src="{{ $image->temporaryUrl() }}" alt="uploaded-image">
-                    <label class="">{{ $image->getClientOriginalName() }}</label>
+                    {{-- <label class="">{{ $image->getClientOriginalName() }}</label> --}}
                     <button type="button" wire:loading.attr="disabled"
                         wire:target="handleRemoveImage({{ $index }})"
                         wire:click.prevent="handleRemoveImage({{ $index }})">
